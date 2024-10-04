@@ -1,4 +1,5 @@
 import {Workbox} from "workbox-window";
+
 if ("serviceWorker" in navigator) { 
   
     const wb = new Workbox('/sw.js');
@@ -8,6 +9,11 @@ wb.addEventListener('activated', event => {
   // worker was controlling the page when this version was registered.
   if (!event.isUpdate) {
     console.log('Service worker activated for the first time!');
+    // If your service worker is configured to precache assets, those
+    // assets should all be available now.
+  }
+    if (event.isUpdate) {
+    console.log('Service worker updated !');
     // If your service worker is configured to precache assets, those
     // assets should all be available now.
   }
