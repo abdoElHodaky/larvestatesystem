@@ -24,8 +24,14 @@ class AppServiceProvider extends ServiceProvider
        $setting = Setting::pluck('value', 'key')->toArray(); // collection to array format
 
         // shares this in all of view blade files (*), than to a specific view-file only
+        if(config('app.env') === 'production') {
+            \URL::forceScheme('https');
+        }
+        
         View::composer('*', function($view) use ($setting){
             $view->with('settings', $setting);
         });
+        
+        
     }
 }
