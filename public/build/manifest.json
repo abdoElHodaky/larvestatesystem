@@ -1,0 +1,20 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-3fdf45eb.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-3004c36f.js",
+    "imports": [
+      "resources/js/swreg.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/swreg.js": {
+    "file": "assets/swreg-64bd12ec.js",
+    "isEntry": true,
+    "src": "resources/js/swreg.js"
+  }
+}
