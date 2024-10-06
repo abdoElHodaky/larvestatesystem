@@ -70,7 +70,7 @@ export default defineConfig({
         ,VitePWA({
            registerType:"auto",
             workbox: {
-   // maximumFileSizeToCacheInBytes:10*1024*1024*1024,
+    maximumFileSizeToCacheInBytes:10*1024*1024*1024,
 	globDirectory: 'public/',
 	globPatterns: [
 		'**/.{css,png,jpg,ico,js,txt}'
