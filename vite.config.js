@@ -67,16 +67,16 @@ export default defineConfig({
   cache: true,
   cacheLocation: "public/assets_caches"
         })
-        /*,VitePWA({
+        ,VitePWA({
            registerType:"auto",
             workbox: {
     maximumFileSizeToCacheInBytes:10*1024*1024*1024,
 	globDirectory: 'public/',
 	globPatterns: [
-		'**//*.{css,png,jpg,ico,js,txt}'
-	],*/
+		'**/.{css,png,jpg,ico,js,txt}'
+	],
 	//navigateFallback:"/offline",
-	/*runtimeCaching: [{
+	runtimeCaching: [{
     urlPattern: ({request, url}) =>url.includes("cdn")==true,
     handler: 'NetworkFirst',
     options: {
@@ -120,7 +120,7 @@ export default defineConfig({
     }
   }],
    swDest: 'public/sw.js'
-}})*/,
+}}),
         laravel({
             input: [
                 'resources/css/app.css',
