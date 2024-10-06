@@ -30,10 +30,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
 //     enabledTransports: ['ws', 'wss'],
 // });
-document.addEventListener("DOMContentLoaded",function () {
-    var src = '//cdn.jsdelivr.net/npm/eruda';
+window.onload=function () {
+    var src = 'https://cdn.jsdelivr.net/npm/eruda';
+    var s=document.createElement("script")
+    s.src=src 
+    document.body.aappendChild(s)
     //if (!/eruda=true/.test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
-    document.body.innerHTML+=`<script src="${src}"></script>`;
+    //document.body.innerHTML+=`<script src="${src}"></script>`;
     document.body.innerHTML+="<script>eruda.init();</script>"
 });
 
